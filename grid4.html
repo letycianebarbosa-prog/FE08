@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Missão 4 - Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .grade-4 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .grade-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .grade-4 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .cartao {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grade-4">
+    <div class="cartao"><h3>Cartão 1</h3><p>Texto curto.</p></div>
+    <div class="cartao"><h3>Cartão 2</h3><p>Texto curto.</p></div>
+    <div class="cartao"><h3>Cartão 3</h3><p>Texto curto.</p></div>
+    <div class="cartao"><h3>Cartão 4</h3><p>Texto curto.</p></div>
+    <div class="cartao"><h3>Cartão 5</h3><p>Texto curto.</p></div>
+    <div class="cartao"><h3>Cartão 6</h3><p>Texto curto.</p></div>
+  </div>
+
+</body>
+</html>

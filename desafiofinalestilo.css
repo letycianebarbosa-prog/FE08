@@ -1,0 +1,122 @@
+/* Regra global exigida (Bronze) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER (Flexbox - Nível Prata) --- */
+.site-header {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* --- MAIN / GRID (CSS Grid - Nível Prata) --- */
+.site-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas grandes */
+    gap: 1.5rem;
+    flex: 1; /* Empurra o rodapé para baixo */
+}
+
+/* --- CARTÕES (Flexbox interno - Nível Prata) --- */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    
+    /* Flexbox aplicado para empurrar o botão para o fundo */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Flexbox dentro do cabeçalho do cartão (Título e Preço na mesma linha) */
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #111827;
+}
+
+.card-price {
+    font-weight: bold;
+    color: #059669;
+}
+
+.card-text {
+    color: #4b5563;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* margin-top: auto garante que o botão fique alinhado na base do cartão */
+.card-btn {
+    margin-top: auto;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.card-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* --- RODAPÉ (Flexbox centralizado - Nível Prata) --- */
+.site-footer {
+    background-color: #1f2937;
+    color: #9ca3af;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

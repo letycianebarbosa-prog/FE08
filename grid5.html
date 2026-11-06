@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Missão 5 - Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .pagina-5 {
+      display: grid;
+      grid-template-areas:
+        "cab cab cab"
+        "menu main lado"
+        "pe   pe   pe";
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 10px;
+    }
+
+    .cabecalho-5 { grid-area: cab; background-color: #e74c3c; color: white; padding: 20px; text-align: center; border-radius: 6px; }
+    .menu-5 { grid-area: menu; background-color: #f39c12; color: white; padding: 20px; text-align: center; border-radius: 6px; }
+    .main-5 { grid-area: main; background-color: #2ecc71; color: white; padding: 20px; text-align: center; border-radius: 6px; }
+    .aside-5 { grid-area: lado; background-color: #9b59b6; color: white; padding: 20px; text-align: center; border-radius: 6px; }
+    .rodape-5 { grid-area: pe; background-color: #34495e; color: white; padding: 20px; text-align: center; border-radius: 6px; }
+  </style>
+</head>
+<body>
+
+  <div class="pagina-5">
+    <div class="cabecalho-5">Cabeçalho</div>
+    <div class="menu-5">Menu</div>
+    <div class="main-5">Principal</div>
+    <div class="aside-5">Lateral</div>
+    <div class="rodape-5">Rodapé</div>
+  </div>
+
+</body>
+</html>
